@@ -52,8 +52,8 @@ export const persistentStore = db => storeCreator => (reducer, initialState) => 
           setReducer(change.doc);
         }
       } else {
-        console.log('saveReducer');
-        saveReducer(change.doc._id, store.getState());
+        console.log('saveReducer | not save');
+        //saveReducer(change.doc._id, store.getState());
       }
     });
   }).catch(console.log.bind(console));
